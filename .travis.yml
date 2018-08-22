@@ -15,16 +15,16 @@ env:
       "context": "travis-ci/$NAME",
       "target_url": "https://travis-ci.org/$TRAVIS_REPO_SLUG/jobs/$TRAVIS_JOB_ID"
       }\nDATA'
-    - EXPECTED=".travis/expected.ini"
+    - EXPECTED=".ci/expected.ini"
 
 cache:
   pip: true
   directories:
-    - $HOME/.cache/result
-    - $HOME/.cache/toolchain 
+    - .cache/result
+    - .cache/toolchain 
 
 before_install:
-  - bash .travis/before_install.sh
+  - bash .ci/before_install.sh
   # setup git
   - git config --global user.name "${U_NAME}"
   - git config --global user.email "${U_EMAIL}"
@@ -36,7 +36,7 @@ after_failure:
   - bash -c "$STATUS" failure "Local $NAME testing has failed"
 
 script:
-  - bash .travis/script.sh
+  - bash .ci/script.sh
 
 matrix:
   include:
