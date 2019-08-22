@@ -1,0 +1,9 @@
+{
+    "OLEVEL": "O3",
+    "APPL": "iLight_arc_node",
+    "BOARD": "iotdk",
+    "BD_VER": "10",
+    "CUR_CORE": "arcem9d",
+    "TOOLCHAIN": "gnu",
+    "EMBARC_OSP_ROOT": "C:/Users/jingru/Documents/git/embarc/embarc_osp"
+}
